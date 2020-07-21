@@ -6,7 +6,7 @@ import './List.css';
 function List(props) {
     const cardsList = props.cards.map(card => {
         const cardObj = Store.allCards[card];
-        return <Card id={cardObj.id} title={cardObj.title} content={cardObj.content}/>
+        return <Card key={cardObj.id} id={cardObj.id} title={cardObj.title} content={cardObj.content}/>
     });
     
     return (
@@ -16,7 +16,7 @@ function List(props) {
             </header>
             <div className="List-cards">
                 {cardsList}
-                <button type="button" class="List-add-button">
+                <button type="button" className="List-add-button">
                 + Add Random Card
                 </button>
             </div>

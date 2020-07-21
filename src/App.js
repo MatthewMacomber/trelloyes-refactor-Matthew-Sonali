@@ -5,7 +5,7 @@ import './App.css';
 
 function App(props) {
   const lists = Store.lists.map(list => {
-    return <List id={list.id} header={list.header} cards={list.cardIds}/>;
+    return <List key={list.id} id={list.id} header={list.header} cards={list.cardIds}/>;
   });
   return (
     <main className="App">
