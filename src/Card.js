@@ -5,7 +5,7 @@ class Card extends React.Component {
     render() {
         return (
             <div id={this.props.id} className="Card">
-                <button type="button" onClick={() => {console.log(`this ${this.props.id} is being clicked`)}}>delete</button>
+                <button type="button" onClick={() => this.props.handleDeleteButton(this.props.id)}>delete</button>
                 <h3>{this.props.title}</h3>
                 <p>{this.props.content}</p>
             </div>
